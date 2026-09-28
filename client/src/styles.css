@@ -1,0 +1,42 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; background: #f5f7fb; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, textarea { font: inherit; }
+.page { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 58px 0 36px; }
+.hero { padding: 10px 4px 34px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .16em; color: #5367d8; margin-bottom: 12px; }
+h1 { font-size: clamp(42px, 6vw, 70px); line-height: .95; letter-spacing: -.055em; margin: 0; }
+h1 span { color: #5367d8; }
+.hero p { max-width: 700px; color: #647087; font-size: 18px; line-height: 1.6; margin: 18px 0 0; }
+.panel, .results { background: white; border: 1px solid #e6e9f0; border-radius: 22px; box-shadow: 0 18px 50px rgba(28, 39, 66, .07); }
+.input-panel { padding: 28px; }
+.section-heading, .result-header, .action-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.section-heading > div, .result-header > div { display: flex; align-items: center; gap: 12px; }
+.step { font-size: 12px; font-weight: 800; color: #5367d8; background: #eef0ff; border-radius: 8px; padding: 6px 8px; }
+h2 { margin: 0; font-size: 21px; letter-spacing: -.02em; }
+textarea { display: block; width: 100%; min-height: 180px; margin: 22px 0 16px; resize: vertical; border: 1px solid #dfe3eb; border-radius: 14px; padding: 18px; color: #172033; background: #fbfcfe; outline: none; line-height: 1.55; }
+textarea:focus { border-color: #7a88df; box-shadow: 0 0 0 4px #eef0ff; }
+button { border: 0; cursor: pointer; }
+.ghost { background: transparent; color: #5367d8; font-weight: 700; }
+.primary { background: #172033; color: white; padding: 12px 17px; border-radius: 10px; font-weight: 750; }
+.primary:disabled { opacity: .4; cursor: not-allowed; }
+.hint { color: #7a8497; font-size: 13px; }
+.error { margin-top: 14px; padding: 12px; border-radius: 10px; background: #fff0f0; color: #a33131; }
+.results { margin-top: 22px; padding: 28px; }
+.badge { font-size: 12px; font-weight: 800; color: #2f7a56; background: #e9f7ef; padding: 7px 10px; border-radius: 999px; }
+.summary { margin: 20px 0; padding: 18px; border-left: 4px solid #5367d8; background: #f7f8ff; border-radius: 0 12px 12px 0; line-height: 1.6; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.card { border: 1px solid #e7eaf0; border-radius: 15px; padding: 18px; min-height: 150px; }
+.card h3 { margin: 0 0 14px; font-size: 13px; color: #6d7789; text-transform: uppercase; letter-spacing: .08em; }
+ul { margin: 0; padding-left: 18px; color: #4f5a6e; line-height: 1.6; }
+li { margin: 5px 0; }
+li small { display: block; color: #9098a7; margin-left: 28px; }
+.metric { font-size: 25px; font-weight: 800; letter-spacing: -.03em; }
+.metric.small { font-size: 19px; }
+.confidence, .risk { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; padding: 4px 7px; border-radius: 6px; }
+.confidence.high { color: #2f7a56; background: #e9f7ef; }.confidence.medium { color: #8a6a20; background: #fff6dc; }.confidence.low { color: #8b4b4b; background: #fff0f0; }
+.risk { margin: 0 8px 0 0; }.risk.high { color: #9b2c2c; background: #ffe8e8; }.risk.medium { color: #8a6a20; background: #fff3d0; }.risk.low { color: #476c91; background: #eaf3fb; }
+.recommendation { margin-top: 16px; padding: 18px; border-radius: 15px; background: #172033; color: white; display: flex; flex-direction: column; gap: 8px; }.recommendation span { color: #aeb7cb; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }.recommendation strong { line-height: 1.5; }
+footer { text-align: center; color: #8992a3; font-size: 12px; padding: 28px 0 0; }
+@media (max-width: 850px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .page { width: min(100% - 24px, 1120px); padding-top: 32px; }.grid { grid-template-columns: 1fr; }.action-row { align-items: stretch; flex-direction: column; }.primary { width: 100%; }.section-heading, .result-header { align-items: flex-start; } }

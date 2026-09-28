@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: procureai-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: procureai
+      POSTGRES_PASSWORD: procureai
+      POSTGRES_DB: procureai
+    ports:
+      - "5432:5432"
+    volumes:
+      - procureai_pgdata:/var/lib/postgresql/data
+
+volumes:
+  procureai_pgdata:
